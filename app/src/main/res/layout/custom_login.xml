@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey"
+    android:paddingBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textViewLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/buttonColor"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textViewConnect"
+        android:layout_marginTop="16dp"
+      />
+
+    <TextView
+        android:id="@+id/textViewConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/helveticaneueregular"
+        android:textColor="@color/black"
+        android:text="@string/connect"/>
+
+    <TextView
+        android:id="@+id/textViewEnterNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter your number"
+        app:layout_constraintStart_toStartOf="@id/textViewConnect"
+        app:layout_constraintTop_toBottomOf="@id/textViewConnect"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/darkGrey"
+        android:textSize="12sp"
+        android:fontFamily="@font/helveticaneueregular"/>
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/codePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/editTextPhonenumber"
+        app:layout_constraintTop_toBottomOf="@id/textViewEnterNumber"
+        app:layout_constraintStart_toStartOf="@id/textViewConnect"
+        android:layout_marginTop="16dp"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_showNameCode="false" />
+
+    <EditText
+        android:id="@+id/editTextPhonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/helveticaneueregular"
+        android:backgroundTintMode="screen"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@id/codePicker"
+        app:layout_constraintStart_toEndOf="@id/codePicker"/>
+
+
+    <View
+        android:id="@+id/viewHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/darkGrey"
+        app:layout_constraintTop_toBottomOf="@id/codePicker"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:fontFamily="@font/helveticaneueregular"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/viewHorizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/buttonColor"
+        android:background="@drawable/custom_button"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonBiometric"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use Biometric Login"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/helveticaneueregular"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/buttonColor"
+        app:layout_constraintTop_toBottomOf="@id/buttonLogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/custom_biometric_button"
+        android:layout_marginTop="24dp"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

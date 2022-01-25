@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Eclectics onBoarding App</string>
+    <string name="connect">Connect and start your\nShift now</string>
+    <string name="access">Access your portal quickly\nand safely</string>
+    <string name="please">Please enter your verification\nCode</string>
+    <string name="change">Change pin for you to\nAccess account</string>
+</resources>

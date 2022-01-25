@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:fontFamily="@font/helveticaneueregular"/>
+    
+    <ImageView
+        android:id="@+id/imageViewTitle"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:src="@drawable/brandbook"
+        app:layout_constraintTop_toBottomOf="@id/textViewWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <ImageView
+        android:id="@+id/imageViewShield"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/shield"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lorem ipsum dolor sit amet,\nconsectetur adipiscing elit. Aliquam velit tellus"
+        android:textColor="@color/black"
+        android:fontFamily="@font/helveticaneueregular"
+        app:layout_constraintTop_toBottomOf="@id/imageViewShield"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSetUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set up account"
+        android:fontFamily="@font/helveticaneueregular"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/textViewDescription"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/buttonColor"
+        android:background="@drawable/custom_button"
+        android:layout_marginTop="24dp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
